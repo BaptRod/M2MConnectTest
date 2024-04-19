@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>be.anb-rimex</groupId>
+	<artifactId>M2MConnect</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<modules>
+		<module>common</module>
+		<module>service</module>
+		<module>view</module>
+		<module>exe</module>
+
+
+	</modules>
+
+	<properties>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jfx.version>21.0.2</jfx.version>
+		<junit-jupiter.version>5.10.0</junit-jupiter.version>
+		<log4j.version>2.20.0</log4j.version>
+		<jakarta.ws.version>3.1.0</jakarta.ws.version>
+		<resteasy.version>6.2.7.Final</resteasy.version>
+		<jakarta.activation.version>2.0.1</jakarta.activation.version>
+		<jackson.version>2.16.1</jackson.version>
+		<atlantafx>2.0.1</atlantafx>
+		<poi>5.2.5</poi>
+		<poi-ooxml>5.2.5</poi-ooxml>
+		<jsch>0.1.55</jsch>
+		<maven.artifact.version>3.6.1</maven.artifact.version>
+		<jaxb-api>2.3.1</jaxb-api>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+
+			<dependency>
+				<groupId>be.anb-rimex</groupId>
+				<artifactId>m2mconnect-common</artifactId>
+				<version>${version}</version>
+			</dependency>
+			<dependency>
+				<groupId>be.anb-rimex</groupId>
+				<artifactId>m2mconnect-view</artifactId>
+				<version>${version}</version>
+			</dependency>
+			<dependency>
+				<groupId>be.anb-rimex</groupId>
+				<artifactId>m2mconnect-service</artifactId>
+				<version>${version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-controls</artifactId>
+				<version>${jfx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-fxml</artifactId>
+				<version>${jfx.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-api</artifactId>
+				<version>${junit-jupiter.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-engine</artifactId>
+				<version>${junit-jupiter.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-api</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-core</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+
+			<!-- Jackson Databind -->
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+
+			<!-- Jackson Annotations -->
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-annotations</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.github.mkpaz</groupId>
+				<artifactId>atlantafx-base</artifactId>
+				<version>${atlantafx}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi</artifactId>
+				<version>${poi}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi-ooxml</artifactId>
+				<version>${poi-ooxml}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.jcraft</groupId>
+				<artifactId>jsch</artifactId>
+				<version>${jsch}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.maven</groupId>
+				<artifactId>maven-artifact</artifactId>
+				<version>${maven.artifact.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>jakarta.xml.bind</groupId>
+				<artifactId>jakarta.xml.bind-api</artifactId>
+				<version>3.0.0</version>
+			</dependency>
+
+			<!-- JAXB RI, Jakarta XML Binding -->
+			<dependency>
+				<groupId>com.sun.xml.bind</groupId>
+				<artifactId>jaxb-impl</artifactId>
+				<version>3.0.0</version>
+				<scope>runtime</scope>
+			</dependency>
+		</dependencies>
+
+
+
+	</dependencyManagement>
+
+	<scm>
+		<connection>scm:git:https://github.com/anb-rimex/M2MConnect.git</connection>
+		<developerConnection>scm:git:https://github.com/anb-rimex/M2MConnect.git</developerConnection>
+		<url>https://github.com/anb-rimex/M2MConnect.git</url>
+	</scm>
+
+    <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.12.1</version>
+				<configuration>
+					<release>17</release>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>3.0.1</version>
+				<configuration>
+					<tagNameFormat>v-@{project.version}</tagNameFormat>
+					<goals>clean</goals>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+
+</project>

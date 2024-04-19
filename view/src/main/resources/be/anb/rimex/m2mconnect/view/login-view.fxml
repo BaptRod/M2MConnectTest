@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.anb.rimex.m2mconnect.view.LoginController">
+   <children>
+      <AnchorPane fx:id="loginPane" prefHeight="800.0" prefWidth="1200.0">
+         <children>
+            <Label fx:id="mailText" layoutX="456.0" layoutY="258.0" prefHeight="17.0" prefWidth="141.0" text="%signin.mail">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <TextField fx:id="fieldMail" layoutX="456.0" layoutY="298.0" prefHeight="25.0" prefWidth="289.0" />
+            <Label fx:id="tokenText" layoutX="456.0" layoutY="363.0" prefHeight="17.0" prefWidth="141.0" text="%signin.password">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <PasswordField fx:id="tokenField" layoutX="456.0" layoutY="400.0" prefHeight="25.0" prefWidth="289.0" />
+            <Label fx:id="errorText" alignment="CENTER" contentDisplay="CENTER" layoutX="422.0" layoutY="207.0" prefHeight="17.0" prefWidth="350.0" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="welcomeText" alignment="CENTER" contentDisplay="CENTER" layoutX="339.0" layoutY="147.0" prefHeight="35.0" prefWidth="523.0" text="%signin.welcom.text" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnLogin" layoutX="514.0" layoutY="510.0" mnemonicParsing="false" onAction="#onClickLogin" prefHeight="25.0" prefWidth="172.0" text="%signin.login" textAlignment="CENTER" />
+            <ProgressIndicator fx:id="loginIndicator" layoutX="577.0" layoutY="590.0" prefHeight="47.0" prefWidth="46.0" />
+            <Label fx:id="version" alignment="CENTER" contentDisplay="CENTER" layoutX="517.0" layoutY="724.0" prefHeight="17.0" prefWidth="166.0" text="V" textAlignment="CENTER" />
+            <CheckBox fx:id="checkBoxRemember" layoutX="527.0" layoutY="461.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="172.0" text="%signin.remember" textAlignment="CENTER" />
+         </children>
+      </AnchorPane>
+   </children>
+
+</Pane>

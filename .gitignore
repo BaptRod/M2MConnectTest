@@ -1,0 +1,17 @@
+/target/
+*/target/**
+*/target/*
+.idea
+.logs
+.update
+*/JRE/**
+
+/ftp/filesToUpload/M2MConnect.xml
+/ftp/filesToUpload/files.chk
+/ftp/filesToUpload/M2MConnect_Setup.exe
+
+/InnoSetup/M2MConnect_Setup.exe
+/update/M2MConnect_Setup.exe
+
+
+login.properties
