@@ -2,6 +2,7 @@ package be.anb.rimex.m2mconnect.view.service;
 
 import be.anb.rimex.m2mconnect.common.AppProperties;
 import be.anb.rimex.m2mconnect.common.EProperty;
+import be.anb.rimex.m2mconnect.common.ResourceLanguage;
 import be.anb.rimex.m2mconnect.service.M2MConnect.M2MConnectUpdateService;
 import be.anb.rimex.m2mconnect.service.M2MConnect.M2MUpdateInfo;
 import be.anb.rimex.m2mconnect.service.exception.M2MException;
@@ -33,7 +34,8 @@ public class M2MUpdateService {
 						
 						Platform.runLater(() -> {
 							try {
-								boolean doIt = Application.showAlert(AppProperties.getInstance().getValueOfProperty(EProperty.UPDATE_MESSAGE) , AlertType.CONFIRMATION);
+								boolean doIt = Application.showAlert(
+									ResourceLanguage.getInstance().getTranslation(EProperty.UPDATE_MESSAGE.getName()) , AlertType.CONFIRMATION);
 								if (doIt) {
 									m2MConnectUpdateService.processUpdate(m2mUpdateInfo);
 								}

@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <M2MConnect>
-	<version>${project.version}</version>
+	<version>1.0.2-SNAPSHOT</version>
 </M2MConnect>
