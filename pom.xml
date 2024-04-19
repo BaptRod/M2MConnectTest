@@ -151,9 +151,9 @@
 	</dependencyManagement>
 
 	<scm>
-		<connection>scm:git:https://github.com/anb-rimex/M2MConnect.git</connection>
-		<developerConnection>scm:git:https://github.com/anb-rimex/M2MConnect.git</developerConnection>
-		<url>https://github.com/anb-rimex/M2MConnect.git</url>
+		<connection>scm:git:https://github.com/BaptRod/M2MConnectTest.git</connection>
+		<developerConnection>scm:git:https://github.com/BaptRod/M2MConnectTest.git</developerConnection>
+		<url>https://github.com/BaptRod/M2MConnectTest.git</url>
 	</scm>
 
     <build>
